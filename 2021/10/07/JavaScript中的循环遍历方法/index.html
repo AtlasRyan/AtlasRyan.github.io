@@ -19,7 +19,7 @@
     <meta name="description" content="整理一些常见的循环遍历方法 数组遍历 forEach() 调用数组中的每一个元素传递给回调函数，不改变原数组，没有返回值，无法跳出循环，只适用于Array对象 1array.forEach(function(currentValue, index, arr), thisValue) map() 按照原始数组顺序处理元素，返回新数组，不改变原数组 1array.forEach(function(cu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript中的循环遍历方法">
-<meta property="og:url" content="http://example.com/2021/10/07/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/index.html">
+<meta property="og:url" content="http://example.com/2021/10/07/JavaScript%E4%B8%AD%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%81%8D%E5%8E%86%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="AtlasRyan">
 <meta property="og:description" content="整理一些常见的循环遍历方法 数组遍历 forEach() 调用数组中的每一个元素传递给回调函数，不改变原数组，没有返回值，无法跳出循环，只适用于Array对象 1array.forEach(function(currentValue, index, arr), thisValue) map() 按照原始数组顺序处理元素，返回新数组，不改变原数组 1array.forEach(function(cu">
 <meta property="og:locale" content="zh_CN">
@@ -92,7 +92,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Fluid</strong>
+      <strong>ATRY</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -216,7 +216,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          undefined 字
+          1.9k 字
         
       </span>
     
@@ -227,7 +227,7 @@
         
         
         
-          NaN 分钟
+          16 分钟
         
       </span>
     
@@ -273,23 +273,23 @@
 <h2 id="数组遍历"><a href="#数组遍历" class="headerlink" title="数组遍历"></a>数组遍历</h2><ol>
 <li><p><code>forEach()</code></p>
 <p>调用数组中的每一个元素传递给回调函数，不改变原数组，没有返回值，无法跳出循环，只适用于Array对象</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">currentValue, index, arr</span>), <span class="title">thisValue</span>)</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js">array.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">currentValue, index, arr</span>), <span class="hljs-title">thisValue</span>)</span><br></code></pre></td></tr></table></figure></li>
 <li><p><code>map()</code></p>
 <p>按照原始数组顺序处理元素，返回新数组，不改变原数组</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">currentValue, index, arr</span>), <span class="title">thisValue</span>)</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">array.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">currentValue, index, arr</span>), <span class="hljs-title">thisValue</span>)</span><br></code></pre></td></tr></table></figure></li>
 <li><p><code>for ... of</code></p>
 <p>遍历可迭代对象要迭代的数据（属性值），可中断</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(variable <span class="keyword">of</span> iterable) &#123;</span><br><span class="line">	statement</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">for</span>(variable <span class="hljs-keyword">of</span> iterable) &#123;<br>	statement<br>&#125;<br></code></pre></td></tr></table></figure></li>
 <li><p><code>filter()</code></p>
 <p>返回满足条件的元素组成的新数组，不改变原数组</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array.filter(<span class="function"><span class="keyword">function</span>(<span class="params">currentValue, index, arr</span>), <span class="title">thisValue</span>)</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">array.filter(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">currentValue, index, arr</span>), <span class="hljs-title">thisValue</span>)</span><br></code></pre></td></tr></table></figure></li>
 <li><p><code>some(), every()</code></p>
 <p>遍历检验数组，返回布尔值，不改变数组</p>
 <p>some()方法遇到符合条件元素即返回true，不再检查余下元素；every()方法在所有元素均符合条件后才返回true</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array.some(<span class="function"><span class="keyword">function</span>(<span class="params">currentValue, index, arr</span>), <span class="title">thisValue</span>)</span></span><br><span class="line"><span class="function"><span class="title">array</span>.<span class="title">every</span>(<span class="params"><span class="keyword">function</span>(currentValue, index, arr), thisValue</span>)</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript">array.some(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">currentValue, index, arr</span>), <span class="hljs-title">thisValue</span>)</span><br><span class="hljs-function"><span class="hljs-title">array</span>.<span class="hljs-title">every</span>(<span class="hljs-params"><span class="hljs-keyword">function</span>(currentValue, index, arr), thisValue</span>)</span><br></code></pre></td></tr></table></figure></li>
 <li><p><code>reduce(), reduceRight()</code></p>
 <p>接受一个函数作为累加器，为每一个元素依次执行回调函数，两方法遍历顺序相反，添加初始值则改变原数组</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">total, currentValue, currentIndex, arr</span>), <span class="title">initialValue</span>)</span></span><br><span class="line"><span class="function"><span class="title">array</span>.<span class="title">reduceRight</span>(<span class="params"><span class="keyword">function</span>(total, currentValue, currentIndex, arr), initialValue</span>)</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript">array.reduce(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">total, currentValue, currentIndex, arr</span>), <span class="hljs-title">initialValue</span>)</span><br><span class="hljs-function"><span class="hljs-title">array</span>.<span class="hljs-title">reduceRight</span>(<span class="hljs-params"><span class="hljs-keyword">function</span>(total, currentValue, currentIndex, arr), initialValue</span>)</span><br></code></pre></td></tr></table></figure></li>
 <li><p><code>keys(), values(), entries()</code></p>
 <p>三者都返回一个与数组有关的可迭代对象</p>
 <ul>
@@ -297,7 +297,7 @@
 <li>values()返回数组的元素</li>
 <li>entries()返回数组的键值对</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">array.keys()</span><br><span class="line">array.values()</span><br><span class="line">array.entires()</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">array.keys()<br>array.values()<br>array.entires()<br></code></pre></td></tr></table></figure>
 
 <hr>
 </li>
@@ -305,7 +305,7 @@
 <h2 id="对象遍历"><a href="#对象遍历" class="headerlink" title="对象遍历"></a>对象遍历</h2><ol>
 <li><p><code>for...in</code></p>
 <p>遍历对象的可枚举属性名，会遍历原型链上的属性</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(variable <span class="keyword">in</span> object) &#123;</span><br><span class="line">	statement</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">for</span>(variable <span class="hljs-keyword">in</span> object) &#123;<br>	statement<br>&#125;<br></code></pre></td></tr></table></figure></li>
 <li><p><code>Object.keys(), Object.values(), Object.entries()</code></p>
 <p>三者均接受对象作为参数，返回与可枚举属性有关的数组</p>
 <ul>
@@ -313,13 +313,13 @@
 <li>Object.values()返回包含对象属性值的数组</li>
 <li>Object.entries()返回包含名值对的数组</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">    <span class="attr">id</span> : <span class="number">1</span>,</span><br><span class="line">    <span class="attr">name</span> : <span class="string">&#x27;jack&#x27;</span>,</span><br><span class="line">    <span class="attr">age</span> : <span class="number">22</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.entries(obj))		<span class="comment">//[&#x27;id&#x27;, &#x27;name&#x27;, &#x27;age&#x27;]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.values(obj))		<span class="comment">//[1, &#x27;jack&#x27;, 22 ]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.entries(obj))	<span class="comment">//[[&#x27;id&#x27;, 1], [&#x27;name&#x27;, &#x27;jack&#x27;], [&#x27;age&#x27;, &#x27;22&#x27;]]</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> obj = &#123;<br>    <span class="hljs-attr">id</span> : <span class="hljs-number">1</span>,<br>    <span class="hljs-attr">name</span> : <span class="hljs-string">&#x27;jack&#x27;</span>,<br>    <span class="hljs-attr">age</span> : <span class="hljs-number">22</span><br>&#125;;<br><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Object</span>.entries(obj))		<span class="hljs-comment">//[&#x27;id&#x27;, &#x27;name&#x27;, &#x27;age&#x27;]</span><br><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Object</span>.values(obj))		<span class="hljs-comment">//[1, &#x27;jack&#x27;, 22 ]</span><br><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Object</span>.entries(obj))	<span class="hljs-comment">//[[&#x27;id&#x27;, 1], [&#x27;name&#x27;, &#x27;jack&#x27;], [&#x27;age&#x27;, &#x27;22&#x27;]]</span><br></code></pre></td></tr></table></figure></li>
 <li><p><code>Object.getOwnPropertyNames()</code></p>
 <p>类似于Object.keys()方法，但是可以返回不可枚举属性(不包括Symbol值作为名称的属性)</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = [<span class="string">&#x27;hello&#x27;</span>, <span class="string">&#x27;world&#x27;</span>]	</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.getOwnPropertyNames(obj))	<span class="comment">//[&#x27;0&#x27;, &#x27;1&#x27;, &#x27;length&#x27;]</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> obj = [<span class="hljs-string">&#x27;hello&#x27;</span>, <span class="hljs-string">&#x27;world&#x27;</span>]	<br><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Object</span>.getOwnPropertyNames(obj))	<span class="hljs-comment">//[&#x27;0&#x27;, &#x27;1&#x27;, &#x27;length&#x27;]</span><br></code></pre></td></tr></table></figure></li>
 <li><p><code>Reflect.ownKeys()</code></p>
 <p>返回一个包含对象自身所有属性的数组，等同于</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.getOwnPropertyNames(obj).concat(<span class="built_in">Object</span>.getOwnPropertySymbols(obj))</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-built_in">Object</span>.getOwnPropertyNames(obj).concat(<span class="hljs-built_in">Object</span>.getOwnPropertySymbols(obj))<br></code></pre></td></tr></table></figure>
 
 <hr>
 </li>
@@ -347,7 +347,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>JavaScript中的循环遍历方法</div>
-      <div>http://example.com/2021/10/07/第一篇博客文章/</div>
+      <div>http://example.com/2021/10/07/JavaScript中的循环遍历方法/</div>
     </div>
     <div class="license-meta">
       

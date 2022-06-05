@@ -16,18 +16,18 @@
   <meta name="author" content="AtlasRyan">
   <meta name="keywords" content="">
   
-    <meta name="description" content="《JS高程》笔记：Promise与异步函数 异步编程​    异步行为是为了优化因计算量大而时间长的操作，避免阻塞线程 ​    JavaScript是单线程的，早期JavaScript程序通过回调函数来表明异步操作  问题​    串联多个异步操作需要使用深度嵌套的回调函数（回调地狱&#x2F;金字塔）  期约​    一种异步程序执行的机制 ​    ES6中推出Promise&#x2F;A+规范，即Promis">
+    <meta name="description" content="整理《JavaScript高级程序设计》的“Promise与异步函数”章节内容  异步编程​    异步行为是为了优化因计算量大而时间长的操作，避免阻塞线程 ​    JavaScript是单线程的，早期JavaScript程序通过回调函数来表明异步操作  问题​    串联多个异步操作需要使用深度嵌套的回调函数（回调地狱&#x2F;金字塔）  期约​    一种异步程序执行的机制 ​    ES6中推出P">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《JS高程》笔记：Promise与异步函数">
 <meta property="og:url" content="http://example.com/2022/03/23/%E3%80%8AJS%E9%AB%98%E7%A8%8B%E3%80%8B%E7%AC%94%E8%AE%B0%EF%BC%9APromise%E4%B8%8E%E5%BC%82%E6%AD%A5%E5%87%BD%E6%95%B0/index.html">
 <meta property="og:site_name" content="AtlasRyan">
-<meta property="og:description" content="《JS高程》笔记：Promise与异步函数 异步编程​    异步行为是为了优化因计算量大而时间长的操作，避免阻塞线程 ​    JavaScript是单线程的，早期JavaScript程序通过回调函数来表明异步操作  问题​    串联多个异步操作需要使用深度嵌套的回调函数（回调地狱&#x2F;金字塔）  期约​    一种异步程序执行的机制 ​    ES6中推出Promise&#x2F;A+规范，即Promis">
+<meta property="og:description" content="整理《JavaScript高级程序设计》的“Promise与异步函数”章节内容  异步编程​    异步行为是为了优化因计算量大而时间长的操作，避免阻塞线程 ​    JavaScript是单线程的，早期JavaScript程序通过回调函数来表明异步操作  问题​    串联多个异步操作需要使用深度嵌套的回调函数（回调地狱&#x2F;金字塔）  期约​    一种异步程序执行的机制 ​    ES6中推出P">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/AtlasRyan/myPic/main/blog/images/2022-03-22_212629.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/AtlasRyan/myPic/main/blog/images/2022-03-23_173845.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/AtlasRyan/myPic/main/blog/images/2022-03-23_175400.png">
 <meta property="article:published_time" content="2022-03-23T11:35:13.000Z">
-<meta property="article:modified_time" content="2022-03-23T11:38:42.496Z">
+<meta property="article:modified_time" content="2022-06-05T04:17:47.785Z">
 <meta property="article:author" content="AtlasRyan">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/AtlasRyan/myPic/main/blog/images/2022-03-22_212629.png">
@@ -96,7 +96,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Fluid</strong>
+      <strong>ATRY</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          undefined 字
+          2.1k 字
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          NaN 分钟
+          18 分钟
         
       </span>
     
@@ -273,7 +273,8 @@
             
             <div class="markdown-body">
               
-              <h1 id="《JS高程》笔记：Promise与异步函数"><a href="#《JS高程》笔记：Promise与异步函数" class="headerlink" title="《JS高程》笔记：Promise与异步函数"></a>《JS高程》笔记：Promise与异步函数</h1><hr>
+              <p>整理《JavaScript高级程序设计》的“Promise与异步函数”章节内容</p>
+<hr>
 <h2 id="异步编程"><a href="#异步编程" class="headerlink" title="异步编程"></a>异步编程</h2><p>​    异步行为是为了优化因计算量大而时间长的操作，避免阻塞线程</p>
 <p>​    JavaScript是单线程的，早期JavaScript程序通过回调函数来表明异步操作 </p>
 <h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>​    串联多个异步操作需要使用深度嵌套的回调函数（回调地狱/金字塔）</p>
@@ -310,13 +311,13 @@
 <blockquote>
 <p>通过调用<code>Promise.resolve()</code>方法，实例化一个解决的期约。</p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> p1 = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>reslove());</span><br><span class="line"><span class="keyword">let</span> p2 = <span class="built_in">Promise</span>.resolve()</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> p1 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve,reject</span>)=&gt;</span>reslove());<br><span class="hljs-keyword">let</span> p2 = <span class="hljs-built_in">Promise</span>.resolve()<br></code></pre></td></tr></table></figure>
 
 <p>​    此时，期约的兑现值为<code>Promise.resolve()</code>的第一个参数，多余参数会被忽略，这个参数可以是任何非期约值，包括错误对象，如果是参数本身是期约，相当于传入一个空包装</p>
 <blockquote>
 <p>通过调用<code>Promise.reject()</code>方法，实例化一个拒绝的期约并抛出异步错误（需要通过异步模式捕获）。</p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> p1 = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>reject());</span><br><span class="line"><span class="keyword">let</span> p2 = <span class="built_in">Promise</span>.reject()</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> p1 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve,reject</span>)=&gt;</span>reject());<br><span class="hljs-keyword">let</span> p2 = <span class="hljs-built_in">Promise</span>.reject()<br></code></pre></td></tr></table></figure>
 
 <p>​    此时，期约的拒绝理由为<code>promise.reject()</code>的第一个参数，该参数可传递给后续的拒绝处理程序，如果参数本身是期约，该期约会成为返回的拒绝期约的理由</p>
 <h3 id="期约的实例方法"><a href="#期约的实例方法" class="headerlink" title="期约的实例方法"></a>期约的实例方法</h3><p>​    <code>Promise.prototype.then()</code>为期约实例添加处理程序，接受两个参数：onResolved处理程序和onRejected处理程序，它们都是可选的，任何非函数类型的参数会被静默忽略。该方法返回一个新的期约实例</p>
@@ -405,7 +406,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/10/07/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" title="JavaScript中的循环遍历方法">
+                      <a href="/2021/10/07/JavaScript%E4%B8%AD%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%81%8D%E5%8E%86%E6%96%B9%E6%B3%95/" title="JavaScript中的循环遍历方法">
                         <span class="hidden-mobile">JavaScript中的循环遍历方法</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
