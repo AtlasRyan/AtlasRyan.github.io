@@ -24,7 +24,7 @@
 <meta property="og:description" content="整理一些常见的循环遍历方法 数组遍历 forEach() 调用数组中的每一个元素传递给回调函数，不改变原数组，没有返回值，无法跳出循环，只适用于Array对象 1array.forEach(function(currentValue, index, arr), thisValue) map() 按照原始数组顺序处理元素，返回新数组，不改变原数组 1array.forEach(function(cu">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-10-07T07:57:41.000Z">
-<meta property="article:modified_time" content="2022-03-23T13:33:28.374Z">
+<meta property="article:modified_time" content="2022-06-12T07:27:29.813Z">
 <meta property="article:author" content="AtlasRyan">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -216,7 +216,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.9k 字
+          1.8k 字
         
       </span>
     
@@ -313,7 +313,7 @@
 <li>Object.values()返回包含对象属性值的数组</li>
 <li>Object.entries()返回包含名值对的数组</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> obj = &#123;<br>    <span class="hljs-attr">id</span> : <span class="hljs-number">1</span>,<br>    <span class="hljs-attr">name</span> : <span class="hljs-string">&#x27;jack&#x27;</span>,<br>    <span class="hljs-attr">age</span> : <span class="hljs-number">22</span><br>&#125;;<br><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Object</span>.entries(obj))		<span class="hljs-comment">//[&#x27;id&#x27;, &#x27;name&#x27;, &#x27;age&#x27;]</span><br><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Object</span>.values(obj))		<span class="hljs-comment">//[1, &#x27;jack&#x27;, 22 ]</span><br><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Object</span>.entries(obj))	<span class="hljs-comment">//[[&#x27;id&#x27;, 1], [&#x27;name&#x27;, &#x27;jack&#x27;], [&#x27;age&#x27;, &#x27;22&#x27;]]</span><br></code></pre></td></tr></table></figure></li>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> obj = &#123;<br>    <span class="hljs-attr">id</span> : <span class="hljs-number">1</span>,<br>    <span class="hljs-attr">name</span> : <span class="hljs-string">&#x27;jack&#x27;</span>,<br>    <span class="hljs-attr">age</span> : <span class="hljs-number">22</span><br>&#125;;<br><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Object</span>.keys(obj))		<span class="hljs-comment">//[&#x27;id&#x27;, &#x27;name&#x27;, &#x27;age&#x27;]</span><br><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Object</span>.values(obj))		<span class="hljs-comment">//[1, &#x27;jack&#x27;, 22 ]</span><br><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Object</span>.entries(obj))	<span class="hljs-comment">//[[&#x27;id&#x27;, 1], [&#x27;name&#x27;, &#x27;jack&#x27;], [&#x27;age&#x27;, &#x27;22&#x27;]]</span><br></code></pre></td></tr></table></figure></li>
 <li><p><code>Object.getOwnPropertyNames()</code></p>
 <p>类似于Object.keys()方法，但是可以返回不可枚举属性(不包括Symbol值作为名称的属性)</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> obj = [<span class="hljs-string">&#x27;hello&#x27;</span>, <span class="hljs-string">&#x27;world&#x27;</span>]	<br><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Object</span>.getOwnPropertyNames(obj))	<span class="hljs-comment">//[&#x27;0&#x27;, &#x27;1&#x27;, &#x27;length&#x27;]</span><br></code></pre></td></tr></table></figure></li>
